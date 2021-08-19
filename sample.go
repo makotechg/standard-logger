@@ -9,4 +9,7 @@ func main() {
 
 	logger.StdPrint("stdout")
 	logger.ErrPrint("stderr")
+
+	logger.StdPrintf("stdprintf:%s", "std output")
+	logger.ErrPrintf("errprintf:%s", "err output")
 }

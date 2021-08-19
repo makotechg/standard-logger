@@ -1,0 +1,2 @@
+[ERROR]2021/08/20 std-logger.go:32: stderr
+[ERROR]2021/08/20 std-logger.go:36: errprintf:err output
