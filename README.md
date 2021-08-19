@@ -30,3 +30,10 @@ This is the minimum configuration logger package for standard output.
             [ERROR]2021/08/20 std-logger.go:36: errprintf:err output
             ```
     
+## Update package
+- Check if the latest version available exists
+    - in PACKAGE : `go list -u -m ${PACKAGE}`
+    - in all : `go list -u -m all`
+- Update to the latest version
+    - in PACKAGE : `go get PACKAGE@latest`
+    - in all : `go get -u`
