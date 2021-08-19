@@ -5,11 +5,11 @@ import (
 )
 
 func main() {
-	logger := stdlogger.NewStdLogger()
+	//logger := stdlogger.NewStdLogger()
 
-	logger.StdPrint("stdout")
-	logger.ErrPrint("stderr")
+	stdlogger.SL.StdPrint("stdout")
+	stdlogger.SL.ErrPrint("stderr")
 
-	logger.StdPrintf("stdprintf:%s", "std output")
-	logger.ErrPrintf("errprintf:%s", "err output")
+	stdlogger.SL.StdPrintf("stdprintf:%s", "std output")
+	stdlogger.SL.ErrPrintf("errprintf:%s", "err output")
 }

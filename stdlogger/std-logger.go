@@ -10,12 +10,19 @@ type stdLogger struct {
 	stderr *log.Logger
 }
 
-func NewStdLogger() *stdLogger {
-	l := new(stdLogger)
-	l.stdout = log.New(os.Stdout, "[INFO]", log.Ldate|log.Lshortfile)
-	l.stderr = log.New(os.Stderr, "[ERROR]", log.Ldate|log.Lshortfile)
-	return l
+var SL *stdLogger = new(stdLogger)
+
+func init() {
+	SL.stdout = log.New(os.Stdout, "[INFO]", log.Ldate|log.Lshortfile)
+	SL.stderr = log.New(os.Stdout, "[ERROR]", log.Ldate|log.Lshortfile)
 }
+
+//func NewStdLogger() *stdLogger {
+//	l := new(stdLogger)
+//	l.stdout = log.New(os.Stdout, "[INFO]", log.Ldate|log.Lshortfile)
+//	l.stderr = log.New(os.Stderr, "[ERROR]", log.Ldate|log.Lshortfile)
+//	return l
+//}
 
 func (sl *stdLogger) StdPrint(v_array ...interface{}) {
 	for i := 0; i < len(v_array); i++ {
