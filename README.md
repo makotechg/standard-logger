@@ -5,17 +5,17 @@ This is the minimum configuration logger package for standard output.
 - import "github.com/makotechg/standard-logger/stdlogger"
 
 - Initialize
-    - `logger := stdlogger.NewStdLogger()`
+    - You don't have to initialize to use this package
 
 - standard output
-    - `logger.StdPrint("your std output string here")`
+    - `stdlogger.SL.StdPrint("your std output string here")`
 
 - standard error output
-    - `logger.ErrPrint("your err output string here")`
+    - `stdlogger.SL.ErrPrint("your err output string here")`
 
 - fatal error output
     - If you use this, program will exit usind os.Exit(1).
-    - `logger.FatalPrint("your err output string here")`
+    - `stdlogger.SL.FatalPrint("your err output string here")`
 
 ## Check output destination
 - command `go run . 1> stdout.log 2> errout.log`
